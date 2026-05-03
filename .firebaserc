@@ -1,0 +1,7 @@
+{
+  "//": "PLACEHOLDER .firebaserc — replace YOUR_FIREBASE_PROJECT_ID with the project ID from the Firebase console (Project settings > General > Project ID). If you reuse the existing NurturAI app's Firebase project, copy that project ID here.",
+
+  "projects": {
+    "default": "YOUR_FIREBASE_PROJECT_ID"
+  }
+}
