@@ -9,10 +9,10 @@ already references them, so swapping the file is a one-step change.
 |---|---|---|
 | `logo-placeholder.svg` | Logo in nav bar + footer | SVG (vector) or 512×512 PNG |
 | `app-icon-placeholder.png` | App icon (large, on the landing page if you choose to show it) | 512×512 PNG |
-| `screenshot-1.png` | Feature row 1 — Assist | ~1200×900 PNG |
-| `screenshot-2.png` | Feature row 2 — Log | ~1200×900 PNG |
-| `screenshot-3.png` | Feature row 3 — History | ~1200×900 PNG |
-| `screenshot-4.png` | Feature row 4 — Characters | ~1200×900 PNG |
+| `screenshot-1.png` | Feature row 1 — Assist | 1206 × 2622 PNG (iPhone Pro Max) |
+| `screenshot-2.png` | Feature row 2 — Log | 1206 × 2622 PNG |
+| `screenshot-3.png` | Feature row 3 — History | 1206 × 2622 PNG |
+| `screenshot-4.png` | Feature row 4 — Characters | 1206 × 2622 PNG |
 
 The pages currently show a dashed-border placeholder labeled
 "Screenshot placeholder · screenshot-N.png" where each screenshot belongs.

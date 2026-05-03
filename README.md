@@ -13,25 +13,33 @@ NurturAI_Website/
 │   ├── privacy.html                 ← Privacy Policy
 │   └── assets/
 │       ├── css/styles.css
+│       ├── js/firebase-init.js      ← Firebase + Analytics initialization
 │       └── images/
 │           ├── logo-placeholder.svg
 │           └── PLACEHOLDERS.md      ← what to swap in
-├── firebase.json                    ← PLACEHOLDER — drop in your real config
-├── .firebaserc                      ← PLACEHOLDER — replace with your project ID
+├── firebase.json                    ← hosting config
+├── .firebaserc                      ← project ID (configured: nurtureai-a98ee)
 └── .gitignore
 ```
 
+## Firebase
+
+The site is wired up to the **`nurtureai-a98ee`** Firebase project (same
+project as the iOS app):
+
+- `.firebaserc` is configured with the project ID.
+- `public/assets/js/firebase-init.js` initializes Firebase JS SDK +
+  Analytics on every page using the web config from the Firebase console.
+  Loaded from Google's ESM CDN — no build step or `npm install` needed.
+
 ## Before deploying
 
-Three things to swap before this goes live:
+Two things still to swap before going live:
 
-1. **`.firebaserc`** — replace `YOUR_FIREBASE_PROJECT_ID` with the project ID
-   from your Firebase console. If you reuse the existing NurturAI iOS app's
-   Firebase project, copy its ID here.
-2. **`firebase.json`** — the version checked in is a sensible default for a
-   static `public/` site. Keep it as-is, or replace with your own.
-3. **Image placeholders** — see [`public/assets/images/PLACEHOLDERS.md`](public/assets/images/PLACEHOLDERS.md)
+1. **Image placeholders** — see [`public/assets/images/PLACEHOLDERS.md`](public/assets/images/PLACEHOLDERS.md)
    for the list of files to drop in (logo, app icon, screenshots).
+2. **App Store URL** — search `public/index.html` for `app-store-coming-soon`
+   (3 spots) and replace with the real App Store link once it's live.
 
 There are also a handful of `LEGAL_PLACEHOLDER` HTML comments in
 `terms.html` marking spots that need your legal entity name, state, and

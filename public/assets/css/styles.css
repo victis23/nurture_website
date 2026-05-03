@@ -592,11 +592,16 @@ p  { margin: 0; color: var(--text-secondary); }
     margin-top: 2px;
 }
 
-/* Screenshot placeholder frame (shared across feature rows) */
+/* Screenshot placeholder frame (shared across feature rows).
+   Sized for portrait phone screenshots at 1206 × 2622 (iPhone Pro Max).
+   Capped at 320px wide so the resulting ~700px height stays balanced
+   against the copy column and rows don't get visually dominated. */
 .shot-frame {
     position: relative;
-    border-radius: var(--r-xl);
-    padding: var(--s-3);
+    border-radius: 44px;
+    padding: 10px;
+    max-width: 320px;
+    margin: 0 auto;
     background: linear-gradient(160deg, rgba(255, 255, 255, 0.7) 0%, rgba(243, 239, 232, 0.5) 100%);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
@@ -606,8 +611,8 @@ p  { margin: 0; color: var(--text-secondary); }
 .shot-frame img,
 .shot-frame .shot-placeholder {
     width: 100%;
-    aspect-ratio: 4 / 3;
-    border-radius: var(--r-lg);
+    aspect-ratio: 1206 / 2622;
+    border-radius: 36px;
     object-fit: cover;
     display: block;
 }
@@ -624,8 +629,10 @@ p  { margin: 0; color: var(--text-secondary); }
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    padding: 0 var(--s-4);
     color: var(--text-faint);
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 500;
     letter-spacing: 0.02em;
     border: 1px dashed rgba(200, 82, 42, 0.35);
